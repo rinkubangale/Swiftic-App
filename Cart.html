@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Store ( Cart )</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+        .navbar{
+            display: flex;
+            color: white;
+            border-radius: 10px;
+        }
+        .navbar img{
+            width: 300px;
+            cursor: pointer;
+            object-fit: cover;
+            height: 10vw;
+            margin-left: 25px;
+        }
+        .navbar > div > h4{
+            width: 120px;
+            color: grey;
+            font-weight: 600;
+            margin-left: 800px;
+            align-self: center;
+            text-decoration: none;
+        }
+        .navbar > div > h3{
+            float: left;
+            cursor: pointer;
+            margin: auto;
+            color: grey;
+            margin-left: 800px;
+            width: 200px;
+            height: 50px;
+        }
+        .cartbody{
+            display: grid;
+            grid-template: "a b b b b";
+        }
+        .cartbody > .checkout{
+            grid-area: a;
+            grid-gap: 50px;
+            padding: 50px;
+            background: rgba(128, 128, 128, 0.486);
+            border-radius: 30px;
+            height: 7vw;
+        }
+        .cartbody > .checkout > p{
+            cursor: pointer;
+            margin-top: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 50px;
+            text-align: center;
+            
+        }
+        p{
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        .cartbody > .checkout input,.cartbody > .checkout button{
+            border-radius: 10px;
+            width: 200px;
+            height: 30px;
+            margin-top: 20px;
+            font-weight: bolder;
+            font-size: 20px;
+            border: none;
+        }
+        .cartbody > #data{
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            grid-gap: 20px;
+            grid-area: b;
+        }
+        .cartbody > #data > div{
+            margin: auto;
+            margin-top: 0px;
+            padding: 0px;
+        }
+        .cartbody > #data > div button{
+            margin: auto;
+            color: white;
+            height: 30px;
+            margin-top: 20px;
+        }
+        .cartbody > #data > div img{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="https://static-marketing.swiftic.com/images/site/2021/02/logo-for-website_564X270_black.png"
+            onclick="window.location.href='Products.html'" />
+        <div>
+            <h4 id="totalNo">Total Item</h4> 
+            <h3 id="totalPrice">Cart Total</h3>
+        </div>
+    </div>
+    <div class="cartbody">
+        <div class="checkout">
+            <p onclick="window.location.href='checkout.html'">CheckOut<br/> Cart</p>
+        </div>
+        <div id="data"></div>
+    </div>
+</body>
+</html>
+<script src="cart.js"></script>

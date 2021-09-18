@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks For Purchase</title>
+    <style>
+        .navbar{
+            display: flex;
+            color: white;
+            border-radius: 10px;
+        }
+        .navbar img{
+            width: 300px;
+            cursor: pointer;
+            object-fit: cover;
+            height: 10vw;
+            margin-left: 25px;
+        }
+        .navbar a{
+            width: 120px;
+            color: grey;
+            font-weight: 600;
+            margin-left: 65%;
+            align-self: center;
+            text-decoration: none;
+        }
+        .navbar a img{
+            float: left;
+            cursor: pointer;
+            margin: auto;
+            margin-left: 0px;
+            width: 50px;
+            height: 50px;
+        }
+        .checkbody{
+            display: flex;
+            flex-direction: column;
+            background: rgba(128, 128, 128, 0.3);
+            border-radius: 18vw;
+            margin: auto;
+            width: 50vw;
+            height: 30vw;
+            padding: 50px;
+        }
+        .checkbody h1,.checkbody h3,.checkbody h5{
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        h5{
+            cursor: pointer;
+            margin-top: 10px;
+            text-decoration: underline;
+        }
+        .checkbody img{
+            margin-left: 15vw;
+            margin-bottom: 0;
+            margin-top: 0;
+            width: 20vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="https://static-marketing.swiftic.com/images/site/2021/02/logo-for-website_564X270_black.png"
+            onclick="window.location.href='Products.html'" />
+        <a href="Cart.html">Cart
+            <img
+                src="https://thumbs.dreamstime.com/b/shopping-cart-icon-shopping-cart-icon-vector-shopping-cart-eps-trolley-logo-shopping-cart-logo-web-icons-trolley-icon-shopping-182252802.jpg" />
+        </a>
+    </div>
+    <div class="checkbody">
+        <h1>Your Order Is Confirmed</h1>
+        <img src="https://www.melbournecurrencyexchange.com/wp-content/uploads/order-confirmed.png" />
+        <h3>Thank You for Shoping with Us...</h3>
+        <h5 onclick="window.location.href='Products.html'">VIEW RELEVENT PRODUCTS</h5>
+    </div>
+</body>
+</html>

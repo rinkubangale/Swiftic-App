@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Store ( Home )</title>
+    <style>
+        .navbar{
+            display: flex;
+            color: white;
+            border-radius: 10px;
+        }
+        .navbar img{
+            width: 300px;
+            cursor: pointer;
+            object-fit: cover;
+            height: 10vw;
+            margin-left: 25px;
+        }
+        .navbar a{
+            width: 120px;
+            color: grey;
+            font-weight: 600;
+            margin-left: 65%;
+            align-self: center;
+            text-decoration: none;
+        }
+        .navbar a img{
+            float: left;
+            cursor: pointer;
+            margin: auto;
+            margin-left: 0px;
+            width: 50px;
+            height: 50px;
+        }
+        .homebody{
+            display: grid;
+            grid-template: "a b b b b";
+        }
+        .homebody > .dashboard{
+            grid-area: a;
+            grid-gap: 50px;
+            padding: 50px;
+            background: rgba(128, 128, 128, 0.486);
+            border-radius: 30px;
+            height: 135vw;
+        }
+        p{
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        h2{
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .homebody > .dashboard input,.homebody > .dashboard button{
+            border-radius: 10px;
+            width: 200px;
+            height: 30px;
+            margin-top: 20px;
+            font-weight: bolder;
+            font-size: 20px;
+            border: none;
+        }
+        .homebody > #data{
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            grid-gap: 20px;
+            grid-area: b;
+        }
+        .homebody > #data > div{
+            display: grid;
+            grid-gap: 10px;
+            justify-items: center;
+            border-radius: 50px;
+            width: 250px;
+            margin: auto;
+            margin-top: 0px;
+            padding: 0px;
+        }
+        .homebody > #data :hover{
+            border: 2px solid grey;
+            box-shadow: 0 0 10px;
+        }
+        .homebody > #data > div > img:hover,.homebody > #data > div > p:hover{
+            box-shadow: none;
+            border: none;
+            padding: 0px;
+        }
+        .homebody > #data > div > p{
+            margin: 0px;
+        }
+        .homebody > #data > div button{
+            cursor: pointer;
+            margin: auto;
+            color: white;
+            height: 30px;
+            margin-top: 20px;
+        }
+        .homebody > #data > div img{
+            margin-top: 100px;
+            margin: auto;
+        }
+        .homebody > #data > div button{
+            border: none;
+            background: yellowgreen;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="https://static-marketing.swiftic.com/images/site/2021/02/logo-for-website_564X270_black.png" onclick="window.location.href='Products.html'"/>
+        <a href="Cart.html">Cart
+        <img src="https://thumbs.dreamstime.com/b/shopping-cart-icon-shopping-cart-icon-vector-shopping-cart-eps-trolley-logo-shopping-cart-logo-web-icons-trolley-icon-shopping-182252802.jpg" />
+        </a>
+    </div>
+    <div class="homebody">
+        <div class="dashboard">
+            <form id="newForm">
+                <h2>Add New Products</h2>
+                <input type="text" id="name" placeholder="  Title" /><br />
+                <input type="text" id="price" placeholder="  Price" /><br />
+                <input type="url" id="img" placeholder="  Image src" />
+            </form>
+            <button onclick="addProduct()">Add</button>
+        </div>
+        <div id="data"></div>
+    </div>
+</body>
+
+</html>
+<script src="main_form.js"></script>
